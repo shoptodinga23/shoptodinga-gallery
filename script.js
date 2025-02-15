@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(changeSlide, 3000); // Change slide every 3 seconds
 });
 
-// Function to navigate to Product Details Page
+// Function to navigate to Product Details Page ok
 function viewProduct(productId) {
     window.location.href = `product.html?id=${productId}`;
 }
