@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoptodinga Gallery BD - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   <!-- 🔹 Navbar -->
+<header>
+    <div class="logo">
+        <img src="assets/images/logo.png" alt="Shoptodinga Gallery Logo">
+    </div>
+    <button class="menu-btn" id="menu-toggle">&#9776;</button> <!-- Menu Button -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- 🔹 Hero Section (Auto-Sliding Image Slider) -->
+<section class="hero">
+    <div class="slider">
+        <img src="assets/images/slider1.jpg" class="slider-image active" alt="Fashion Collection 1">
+        <img src="assets/images/slider2.jpeg" class="slider-image" alt="Fashion Collection 2">
+        <img src="assets/images/slider3.jpeg" class="slider-image" alt="Fashion Collection 3">
+        <div class="slider-text">
+            <h1>Elegant Women's Wear</h1>
+            <p>Discover the latest trends in fashion</p>
+            <a href="#our-collection" class="btn">Shop Now</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- 🔹 Featured Products Section -->
+<section class="featured-products">
+    <h2>Featured Products</h2>
+    <div id="featured-loader" class="loader">
+        <div></div>
+    </div>
+    <div id="featured-gallery" class="product-grid">
+        <!-- Featured Products will be inserted dynamically -->
+    </div>
+</section>
+
+<!-- 🔹 Our Collection Section -->
+<section id="our-collection">
+    <h2>Our Collection</h2>
+    <div class="filters">
+        <input type="text" id="search" placeholder="Search product...">
+        <select id="category-filter">
+            <option value="">All Categories</option>
+        </select>
+        <select id="price-sort">
+            <option value="">Sort by Price</option>
+            <option value="low-high">Low to High</option>
+            <option value="high-low">High to Low</option>
+        </select>
+    </div>
+    <div id="collection-loader" class="loader">
+        <div></div>
+    </div>
+    <div id="product-gallery" class="product-grid">
+        <!-- Products will be inserted dynamically -->
+    </div>
+</section>
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <p>&copy; 2025 Shoptodinga Gallery. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

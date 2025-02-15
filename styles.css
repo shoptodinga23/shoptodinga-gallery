@@ -1,0 +1,302 @@
+/* 🔹 Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5E6E0; /* Warm Beige */
+    color: #333333; /* Deep Charcoal Gray */
+    width: 100vw;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* 🔹 Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #E9A8A8; /* Elegant Rose Pink */
+    position: relative;
+    z-index: 1000; /* Ensures Navbar Stays on Top */
+}
+
+/* 🔹 Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* 🔹 Navigation Menu */
+nav {
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(49, 48, 48);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #fcabab;
+    border-radius: 10%;
+}
+
+/* 🔹 Menu Button (Hamburger Icon) - Only for Mobile */
+.menu-btn {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 🔹 Mobile View: Fix Menu Animation & Ensure it Doesn’t Cover Logo */
+@media screen and (max-width: 1024px) {
+    .menu-btn {
+        display: block; /* Show menu button */
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        z-index: 1100; /* Ensures it stays above everything */
+    }
+
+    nav {
+        display: none; /* Hide nav menu initially */
+        position: absolute;
+        top: 60px; /* Moves it below the header */
+        left: 0;
+        width: 100%;
+        background: #E9A8A8;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1050; /* Ensures it stays on top */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav.active {
+        display: block; /* Show when active */
+    }
+}
+
+
+
+/* 🔹 Hero Section */
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 300px; /* Default Mobile */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔹 Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #E9A8A8; /* Elegant Rose Pink Border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔹 Slider Images */
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full image coverage */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* 🔹 Active Image (Visible Image) */
+.slider img.active {
+    opacity: 1;
+}
+
+/* 🔹 Overlay Text */
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 🔹 Desktop View */
+@media screen and (min-width: 1024px) {
+    .hero {
+        height: 500px;
+    }
+
+    .slider {
+        border: 15px solid #E9A8A8; /* Thicker border for desktop */
+    }
+
+    .slider-text {
+        font-size: 20px;
+    }
+}
+
+
+/* 🔹 Featured Products & Our Collection Section */
+.featured-products, #our-collection {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; /* White background */
+}
+
+.featured-products h2, #our-collection h2 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Mobile - Single Column */
+    gap: 15px;
+    padding: 15px;
+}
+
+/* 🔹 Product Card */
+.product-card {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Ensure All Product Images Have Same Size */
+.product-card img {
+    width: 100%; /* Full width inside card */
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images fill the area without distortion */
+    border-radius: 5px;
+}
+
+/* 🔹 Button */
+.product-card button {
+    background-color: #E9A8A8; /* Gold Accent */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.product-card button:hover {
+    background-color: #df9494;
+}
+
+/* 🔹 Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #E9A8A8;
+    color: white;
+}
+
+/* 🔹 Desktop View (ONLY One Breakpoint) */
+@media screen and (min-width: 1024px) {
+    /* 🔹 Desktop Header */
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: row; /* Horizontal for Desktop */
+        justify-content: flex-end;
+    }
+
+    /* 🔹 Fix Hero Section */
+    .hero {
+        height: 500px; /* Increase Height for Desktop */
+    }
+
+    .hero .slider {
+        height: 100%;
+        width: 100vw; /* Ensure Full Width */
+        background-size: cover; /* Ensures Full Coverage */
+    }
+
+    .slider-text {
+        font-size: 20px;
+    }
+
+    /* 🔹 Product Grid */
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 Columns for Desktop */
+    }
+
+    /* 🔹 Loading Animation */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px; /* Fixed height for loader */
+}
+
+.loader div {
+    width: 30px;
+    height: 30px;
+    border: 4px solid transparent;
+    border-top: 4px solid #E9A8A8; /* Elegant Rose Pink */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+}
