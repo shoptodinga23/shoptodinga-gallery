@@ -29,6 +29,8 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    z-index: 1100; /* Keep logo on top */
+    position: relative;
 }
 
 .logo img {
@@ -70,7 +72,7 @@ nav ul li a:hover {
     background: none;
     border: none;
     font-size: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -92,13 +94,14 @@ nav ul li a:hover {
         width: 100%;
         background: #E9A8A8;
         text-align: center;
-        padding: 10px 0;
+        padding: 15px 0;
         z-index: 1050; /* Ensures it stays on top */
+        transition: all 1.2s ease-in-out;
     }
 
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 16px;
     }
 
     nav.active {
@@ -159,6 +162,30 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Slider Shop Now Button  */
+/* 🔹 Shop Now Button */
+.shop-now-btn {
+    display: inline-block;
+    background-color: #E9A8A8; /* Elegant Rose Pink */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #E9A8A8;
+}
+
+/* 🔹 Hover Effect */
+.shop-now-btn:hover {
+    background-color: #D4AF37; /* Gold Accent */
+    border-color: #D4AF37;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(212, 175, 55, 0.5);
+}
+
+
 /* 🔹 Desktop View */
 @media screen and (min-width: 1024px) {
     .hero {
@@ -179,7 +206,7 @@ nav ul li a:hover {
 .featured-products, #our-collection {
     text-align: center;
     padding: 20px;
-    background-color: #fff; /* White background */
+    background-color: #eecece; /* White background */
 }
 
 .featured-products h2, #our-collection h2 {
@@ -273,30 +300,202 @@ footer {
         grid-template-columns: repeat(3, 1fr); /* 3 Columns for Desktop */
     }
 
-    /* 🔹 Loading Animation */
-.loader {
+}
+
+/* 🔹 Loading Spinner */
+.loading-spinner {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px; /* Fixed height for loader */
+    height: 100px;
 }
 
-.loader div {
-    width: 30px;
-    height: 30px;
-    border: 4px solid transparent;
-    border-top: 4px solid #E9A8A8; /* Elegant Rose Pink */
+.loading-spinner div {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #E9A8A8; /* Elegant Rose Pink */
+    border-top: 4px solid transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
 
+/* 🔹 Loading Animation */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
+/* 🔹 Mobile & Desktop View Compatibility */
+@media screen and (max-width: 1024px) {
+    .loading-spinner div {
+        width: 30px;
+        height: 30px;
+        border-width: 3px;
+    }
+}
+
+/* 🔹 Our Collection Section */
+#our-collection {
+    background-color: #fce4e4; /* Light Pink Background */
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* 🔹 Our Collection Heading */
+#our-collection h2 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 🔹 Search & Filter Container */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Input Fields & Dropdown Styling */
+.search-container input,
+.search-container select {
+    width: 90%;
+    max-width: 300px;
+    padding: 12px;
+    border: 2px solid #E9A8A8; /* Elegant Rose Pink Border */
+    border-radius: 25px;
+    font-size: 14px;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Placeholder Styling */
+.search-container input::placeholder {
+    color: #d48f8f; /* Light Rose Pink */
+    font-style: italic;
+}
+
+/* 🔹 Focus Effects */
+.search-container input:focus,
+.search-container select:focus {
+    outline: none;
+    border-color: #D4AF37; /* Gold Accent */
+    box-shadow: 0px 0px 8px rgba(212, 175, 55, 0.5);
+}
+
+/* 🔹 Dropdown Arrow Customization */
+.search-container select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23E9A8A8" height="20" width="20" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+/* 🔹 Hover Effects */
+.search-container input:hover,
+.search-container select:hover {
+    border-color: #b45e5e; /* Darker Rose Pink */
+}
+
+/* 🔹 Responsive Layout */
+@media screen and (min-width: 1024px) {
+    .search-container {
+        flex-direction: row; /* Align items in a row */
+        justify-content: center;
+    }
+
+    .search-container input,
+    .search-container select {
+        width: 250px;
+    }
+}
 
 
+/* 🔹 Footer */
+footer {
+    background-color: #E9A8A8; /* Elegant Rose Pink */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
 
+/* 🔹 Footer Content */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 🔹 Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* 🔹 Social Links */
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: #E9A8A8;
+    font-size: 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Hover Effects */
+.social-link:hover {
+    background-color: #D4AF37; /* Gold Accent */
+    color: white;
+    transform: scale(1.1);
+}
+
+/* 🔹 Responsive Design */
+@media screen and (min-width: 1024px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.whatsapp-link:hover {
+    background-color: #1ebe5a;
 }

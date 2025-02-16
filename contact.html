@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Shoptodinga Gallery</title>
+    <link rel="stylesheet" href="styles/contact_styles.css">
+    <link rel="stylesheet" href="styles/home_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- 🔹 Navbar -->
+    <header>
+        <div class="logo">
+            <a href="index.html"> <img src="assets/images/logo.png" alt="Shoptodinga Gallery Logo"> </a>
+        </div>
+        <button class="menu-btn" id="menu-toggle">&#9776;</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🔹 Contact Us Section -->
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Reach out to us using the form below.</p>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+
+                <!-- CAPTCHA -->
+                <div class="captcha-container">
+                    <input type="checkbox" id="captcha" required>
+                    <label for="captcha">I'm not a robot</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Send Message</button>
+                <div id="form-message"></div>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Mohammadia Housing Society, Mohammadpur, Dhaka, Bangladesh</p>
+                <p><i class="fas fa-phone"></i> +880 1942-404561</p>
+                <p><i class="fas fa-envelope"></i> shoptodinga23@gmail.com</p>
+
+                <!-- Google Maps -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.832611663969!2d90.35789051542827!3d23.750839184587353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf52b31f7b5b%3A0x1b71c5f5a8e42b32!2sMohammadia%20Housing%20Society%2C%20Mohammadpur%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1615965727753!5m2!1sen!2sbd" 
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <div class="footer-content">
+        <a href="https://wa.me/+8801942404561" target="_blank" class="whatsapp-link">
+            <img src="assets/images/WhatsApp-Icon.png" alt="WhatsApp Chat">
+            <span>Contact Us</span>
+        </a>
+
+        <p>&copy; 2025 Shoptodinga Gallery. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100091348261533" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/+8801942404561" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

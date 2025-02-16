@@ -1,0 +1,117 @@
+/* 🔹 General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5E6E0; /* Warm Beige */
+    color: #333333;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Contact Section */
+.contact-section {
+    background-color: #F5E6E0;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    text-align: center;
+    
+}
+
+/* 🔹 Contact Form */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+/* 🔹 Input Fields */
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #E9A8A8;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+/* 🔹 CAPTCHA */
+.captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Submit Button */
+.submit-btn {
+    background-color: #E9A8A8;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #D4AF37;
+}
+
+/* 🔹 Contact Info */
+.contact-info {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-info i {
+    color: #E9A8A8;
+    margin-right: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Google Maps */
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* 🔹 Responsive Design */
+@media screen and (min-width: 1024px) {
+    .contact-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    form, .contact-info {
+        flex: 1;
+    }
+
+    .map-container iframe {
+        height: 250px;
+    }
+}
